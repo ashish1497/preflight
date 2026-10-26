@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Preflight design tokens (see docs/execution-plan.md §2). */
+@theme {
+  --color-ink: #0b1f3a; /* navy: sidebar, headings, dark map */
+  --color-ink-2: #12294a; /* raised navy surfaces */
+  --color-brand: #0e6f68; /* teal: primary actions, links (6.0:1 on white, 4.7:1 on page) */
+  --color-brand-hover: #0b5e58;
+  --color-brand-soft: #ccfbf1; /* teal-100: tints */
+  --color-ai: #4f46e5; /* indigo-600: AI-filled / suggested */
+  --color-ai-soft: #eef2ff; /* indigo-50 */
+  --color-surface: #dce5ee; /* page background: cool blue-grey so white cards stand out */
+  --color-panel: #e8f0f5; /* tinted section headers */
+  --color-sidebar: #f3f8f8;
+
+  /* Slate overrides tuned for contrast (WCAG AA on white, the page tint and section headers). */
+  --color-slate-50: #f4f7fa;
+  --color-slate-100: #e3eaf1;
+  --color-slate-200: #bfccda; /* card + divider lines */
+  --color-slate-300: #8394a9; /* control outlines: 3.1:1 on white */
+  --color-slate-400: #566579; /* muted text + placeholders: 4.7:1 on the page tint */
+  --color-slate-500: #4b5b72; /* secondary text: 5.4:1 on the page tint */
+  --color-slate-600: #3a4a60;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-surface);
+  color: #0f172a;
+}
+
+/* Thin scrollbars inside panels */
+.scroll-thin { scrollbar-width: thin; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+@media print {
+  body * { visibility: hidden; }
+  #print-area, #print-area * { visibility: visible; }
+  #print-area { position: absolute; inset: 0; padding: 24px; background: white; }
+  .no-print { display: none !important; }
+}

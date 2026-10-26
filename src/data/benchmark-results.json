@@ -1,0 +1,174 @@
+{
+  "bookings": 145,
+  "withMistakes": 72,
+  "plantedTotal": 79,
+  "caught": 79,
+  "recall": 1,
+  "perType": [
+    {
+      "mistake": "R-01",
+      "text": "HS code blank or cut short",
+      "planted": 8,
+      "caught": 8
+    },
+    {
+      "mistake": "R-02",
+      "text": "Declared value off by 3–25%",
+      "planted": 7,
+      "caught": 7
+    },
+    {
+      "mistake": "R-03",
+      "text": "Units per carton don't match quantity",
+      "planted": 7,
+      "caught": 7
+    },
+    {
+      "mistake": "R-04",
+      "text": "Booking carton total off",
+      "planted": 6,
+      "caught": 6
+    },
+    {
+      "mistake": "R-05",
+      "text": "Pallets too heavy for every carrier",
+      "planted": 7,
+      "caught": 7
+    },
+    {
+      "mistake": "R-06",
+      "text": "Restricted item (lithium battery / perfume)",
+      "planted": 9,
+      "caught": 9
+    },
+    {
+      "mistake": "R-07",
+      "text": "Gross weight below goods weight",
+      "planted": 6,
+      "caught": 6
+    },
+    {
+      "mistake": "R-08",
+      "text": "Warehouse with no delivery slot",
+      "planted": 6,
+      "caught": 6
+    },
+    {
+      "mistake": "R-09",
+      "text": "Country of origin blank",
+      "planted": 9,
+      "caught": 9
+    },
+    {
+      "mistake": "R-10",
+      "text": "Ready date in the past",
+      "planted": 6,
+      "caught": 6
+    },
+    {
+      "mistake": "D-01",
+      "text": "Vague description (\"Gifts\")",
+      "planted": 8,
+      "caught": 8
+    }
+  ],
+  "correctBookings": 55,
+  "falseAlarmBookings": 0,
+  "falseAlarmRate": 0,
+  "edgeCases": [
+    {
+      "label": "Ready date is today",
+      "flagged": false
+    },
+    {
+      "label": "Exactly 750 kg per pallet (standard service limit)",
+      "flagged": false
+    },
+    {
+      "label": "Declared value within the 1% tolerance",
+      "flagged": false
+    },
+    {
+      "label": "Declared value within the 1% tolerance",
+      "flagged": false
+    },
+    {
+      "label": "Gross weight equal to goods weight",
+      "flagged": false
+    },
+    {
+      "label": "Ready date is today",
+      "flagged": false
+    },
+    {
+      "label": "Business address with no delivery slot",
+      "flagged": false
+    },
+    {
+      "label": "Gross weight equal to goods weight",
+      "flagged": false
+    },
+    {
+      "label": "Gross weight equal to goods weight",
+      "flagged": false
+    },
+    {
+      "label": "Ready date is today",
+      "flagged": false
+    },
+    {
+      "label": "Business address with no delivery slot",
+      "flagged": false
+    },
+    {
+      "label": "Declared value within the 1% tolerance",
+      "flagged": false
+    },
+    {
+      "label": "Business address with no delivery slot",
+      "flagged": false
+    },
+    {
+      "label": "Exactly 750 kg per pallet (standard service limit)",
+      "flagged": false
+    },
+    {
+      "label": "Exactly 750 kg per pallet (standard service limit)",
+      "flagged": false
+    }
+  ],
+  "extraFlags": 0,
+  "blockedCorrectly": 42,
+  "redPlantedBookings": 42,
+  "msPerBooking": 0.29626924827586204,
+  "misses": [],
+  "falseAlarms": [],
+  "blind": [
+    {
+      "type": "X-HS",
+      "text": "Valid HS code for the wrong product",
+      "planted": 6,
+      "caught": 0
+    },
+    {
+      "type": "X-ORIGIN",
+      "text": "Wrong (but valid) country of origin",
+      "planted": 6,
+      "caught": 0
+    },
+    {
+      "type": "X-PRICE",
+      "text": "Unit price typo ×10, totals updated to match",
+      "planted": 6,
+      "caught": 0
+    }
+  ],
+  "setup": {
+    "seed": 20261026,
+    "clean": 40,
+    "edge": 15,
+    "perMistake": 6,
+    "today": "2026-10-26"
+  },
+  "runAt": "2026-10-26"
+}
